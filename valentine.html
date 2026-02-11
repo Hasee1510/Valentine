@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Surprise ❤️</title>
+
+<style>
+    body {
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .box {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        width: 380px;
+        margin: auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        position: relative;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    #yesBtn {
+        background-color: #ff4b5c;
+        color: white;
+    }
+
+    #noBtn {
+        background-color: #999;
+        color: white;
+        position: absolute;
+    }
+
+    #quotes {
+        margin-top: 20px;
+        display: none;
+        font-size: 16px;
+        color: #333;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .quote {
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+
+    a {
+        color: #ff4b5c;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>❤️ One Question ❤️</h2>
+
+    <p>എന്നെ കെട്ടീട്ട് ഇടങ്ങേറായി ല്ലേ? 🥲</p>
+
+    <button id="yesBtn" onclick="showQuotes()">Yes ❤️</button>
+    <button id="noBtn">No</button>
+
+    <div id="quotes">
+        <i>
+            നന്നായൊളളു 😁😁😁 ഇന് ഷാ അല്ലാഹ് 🤲🏻  
+            ഇനിയും .. അല്ലാഹ് ന്റെ വിധി ഉണ്ടെങ്കി 😌😌...
+        </i>
+
+        <br><br>
+
+        <a href="#" onclick="showRealQuotes(); return false;">
+            Click here to read something special ❤️
+        </a>
+
+        <div id="realQuotes" style="display:none; margin-top:15px;">
+            <div class="quote">
+                “ജീവിതത്തിൽ ഏറ്റവും മനോഹരമായത് ഒരാൾ മറ്റൊരാളായി മാറാതെ കൂടെ നടക്കുന്നതാണ്.❤️”
+            </div>
+
+            <div class="quote">
+                “ഒരുമിച്ച് ജീവിക്കുന്നത് മാത്രമല്ല വിവാഹം, ഒരുമിച്ച് മനസ്സിലാക്കുന്നതാണ്.❤️”
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", function() {
+    const x = Math.random() * 260;
+    const y = Math.random() * 150;
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+function showQuotes() {
+    document.getElementById("quotes").style.display = "block";
+}
+
+function showRealQuotes() {
+    document.getElementById("realQuotes").style.display = "block";
+}
+</script>
+
+</body>
+</html>
